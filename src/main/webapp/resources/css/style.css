@@ -1,0 +1,10 @@
+body, #tb{
+    background: aliceblue;
+}
+.ui-g-12{
+    text-align: center;
+}
+#tb{
+    display: inline-block;
+    border: none;
+}

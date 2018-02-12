@@ -12,18 +12,15 @@
         <title>Товары</title>
     </h:head>
     <h:body>
+        <h:outputStylesheet library="css" name="style.css" />
         <div class="ui-g">
             <div class="ui-g-12">
-                <p:toolbar>
-                    <f:facet name="left">
-                        <p:button href="/product-list.jsf" value="Список товаров"/>
-                        <p:button href="/product-form.jsf" value="Новый товар"/>
-                    </f:facet>
-                </p:toolbar>
+                <ui:insert name="toolbar"/>
             </div>
             <div class="ui-g-12">
                 <ui:insert name="content"/>
             </div>
+            <p:sticky target="tb" />
         </div>
     </h:body>
 </f:view>

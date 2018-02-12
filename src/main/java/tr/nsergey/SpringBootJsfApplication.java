@@ -23,6 +23,7 @@ public class SpringBootJsfApplication {
 		public void onStartup(ServletContext servletContext){
 
 			servletContext.setInitParameter("primefaces.THEME", "bootstrap");
+			servletContext.setInitParameter("primefaces.FONT_AWESOME", "true");
 			servletContext.setInitParameter("javax.faces.DEFAULT_SUFFIX",
 					".xhtml");
 			servletContext.setInitParameter(

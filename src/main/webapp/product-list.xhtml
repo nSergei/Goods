@@ -6,6 +6,14 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
 <ui:composition template="layout.xhtml">
+    <ui:define name="toolbar">
+        <p:toolbar id="tb">
+            <f:facet name="left">
+                <!--<p:button href="/product-list.jsf" icon="fa fa-list" value="Список товаров"/>-->
+                <p:button href="/product-form.jsf" icon="fa fa-plus" value="Новый товар"/>
+            </f:facet>
+        </p:toolbar>
+    </ui:define>
     <ui:define name="content">
         <f:event type="postAddToView" listener="#{productListController.loadData}" />
         <h:form id="form">
