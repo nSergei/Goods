@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets" xmlns:p="http://primefaces.org/ui">
+<ui:composition template="layout.xhtml">
+    <ui:define name="content">
+        <h:form id="productForm">
+            <p:panel header="Информация о товаре">
+                <h:panelGrid columns="1">
+                    <p:outputLabel for="name" value="Название: "/>
+                    <p:inputText id="name" value="#{productController.product.name}" required="true"
+                                 requiredMessage="У товара должно быть название!"/>
+                    <p:message for="name" />
+                    <h:outputText value="#{productController.product.name}" />
+                    <p:outputLabel for="price" value="Цена: "/>
+                    <p:inputNumber id="price" value="#{productController.product.price}" required="true"
+                                   requiredMessage="У товара должна быть цена!"/>
+                    <p:message for="price" />
+                    <h:outputText value="#{productController.product.price}" />
+                    <p:outputLabel for="location" value="Местонахождение: "/>
+                    <p:inputText id="location" value="#{productController.product.location}"/>
+                    <h:commandButton value="Сохранить" action="#{productController.save}"/>
+                </h:panelGrid>
+            </p:panel>
+        </h:form>
+    </ui:define>
+</ui:composition>
+</html>
